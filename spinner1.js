@@ -1,17 +1,39 @@
-const spinnerArray = ['\    ', '\/   ', '\-   ', '\\   ', '\|   '];
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 100);
 
-const spinner1 = function(arry) {
-  let timeout = 100;
-  const times = 2;
+setTimeout(() => {
+  process.stdout.write('\r/   ');
+}, 300);
 
-  for (let i = 0; i < arry.length * times; i++) {
-    let tmpStr = arry[i % arry.length];
+setTimeout(() => {
+  process.stdout.write('\r-   ');
+}, 500);
 
-    setTimeout(() => {
-      process.stdout.write("\r" + tmpStr);
-      if(i === arry.length * times - 1) console.log();
-    }, timeout += 200);    
-  }
-}
+setTimeout(() => {
+  process.stdout.write('\r\\   '); 
+}, 700);
 
-spinner1(spinnerArray);
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 900);
+
+setTimeout(() => {
+  process.stdout.write('\r/   ');
+}, 1100);
+
+setTimeout(() => {
+  process.stdout.write('\r-   ');
+}, 1300);
+
+setTimeout(() => {
+  process.stdout.write('\r\\   '); 
+}, 1500);
+
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 1700);
+
+setTimeout(() => {
+  console.log();
+}, 1900);
